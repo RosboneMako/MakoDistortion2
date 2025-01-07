@@ -77,11 +77,11 @@ are very CPU intensive. Changing the quality reduces CPU usage by using
 a small section of the IR instead of the whole IR. 
 
 THUMP, AIR, ASYM, POWER, SAG, and THIN<br/>
-Thump and Air boost the low and high freqs using a distorting circuit.
-Asymmetry adds distortion to the lower half of the signal only. 
-Power adds the same distortion across the full range. 
-Sag limits fast transients to simulate an amp running out of power.
-Thin compresses the signal if a lot of gain is being used.
+Thump and Air boost the low and high freqs using a distorting circuit.<br/>
+Asymmetry adds distortion to the lower half of the signal only. <br/>
+Power adds the same distortion across the full range. <br/>
+Sag limits fast transients to simulate an amp running out of power.<br/>
+Thin compresses the signal if a lot of gain is being used.<br/>
 
 EQ MODE AND LOW PASS<br/>
 There are 10 EQs prgrammed into the VST. Change EQs by changing the MODE
