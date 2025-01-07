@@ -20,12 +20,12 @@ This VST is under constant development and changes daily.
 
 THINGS TO KNOW
 ------------------------------------------------------------------
-VST LIMITATIONS
+VST LIMITATIONS<br/>
 VST's do not save strings variables. This means things like IR
 files, WAVE files, etc used in the VST will NOT BE AVAILABLE
 from within the DAW at startup or its presets. 
 
-MD2 PRESETS
+MD2 PRESETS<br/>
 The best way to use MD2 is to load and save presets within the VST.
 The preset files save any custom IR data in them.
 
