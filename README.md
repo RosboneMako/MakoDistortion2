@@ -14,6 +14,8 @@ SUMMARY
 A Juce/C++ VST3 guitar processor. Complete end to end processing
 abilities like effects, amplifiers, EQ, etc.
 
+This VST is under constant development and changes daily. 
+
 THINGS TO KNOW
 ------------------------------------------------------------------
 VST LIMITATIONS
@@ -71,6 +73,7 @@ The final block has controls for balance, stereo effect, and output filters.
 The stereo effect (WIDTH) will delay either the left or right channel to
 create stereo. 
 
+
 STEREO/MONO SIGNAL PATH 
 ------------------------------------------------------------------
 The IR calculations are very CPU intensive. This means the best mode
@@ -94,6 +97,10 @@ QUALITY<br/>
 Each amplifier uses a 1024 sample IR for its frequency definition. IRs
 are very CPU intensive. Changing the quality reduces CPU usage by using
 a small section of the IR instead of the whole IR. 
+
+SLOPE<br/>
+MD2 amps use two styles of clipping: Hard and Soft. The slope control mixes
+between the two types. Soft is best used for low gain and hard for high gain.
 
 THUMP, AIR, ASYM, POWER, SAG, and THIN<br/>
 Thump and Air boost the low and high freqs using a distorting circuit.<br/>
@@ -135,15 +142,56 @@ pitch based sounds. There are four mono-synthesizer styled effects
 available also. Three of these effects require specific WAVE files
 to operate. 
 
-IMPULSE RESPONSES
+
+EXTERNAL IMPULSE RESPONSES
 ------------------------------------------------------------------
+MD2 uses 1024 sample IRs. The program does not try to parse out WAVE
+files. It assumes the first 1024 samples are the correct IR data. It
+is best to verify the files in an external program before use. 
+
+IR files are created for a certain sample rate. The VST is designed
+to run at a 48 kHz sample rate. 48 kHz IR files should be used. The
+frequency response of the IR is tightly tied to the sample rate. So 
+the correct sample rate is very important. Once the IR is loaded into
+the VST, it can be resampled using the SIZE control to get close to
+its original frequency response.
+
+Any IRs that are loaded manually have a copy saved inside the MD2
+preset file, so it will not be necessary to hunt them down manually
+at a later date. They will NOT be availabe from any DAW related presets.
 
 
+DIALING IN AN AMPLIFIER 
+------------------------------------------------------------------
+The most important thing to set up is the frequencies presented to
+the amplifier section. 
 
+BOOMINESS<br/>
+Some amps have a lot of low end present. It may be good to reduce your
+guitars low end before the amp. This can be done with the INPUT sections
+HIGH PASS filter. Values in the 80-150 Hz can be very good.
 
+Another option is to use an OD pedal or the Dist EQ pedals. These will
+provide even greater control and can be used to simulate other amps by
+boosting certain freqs such as mids.
 
+CRISPY HARSHNESS<br/>
+Some amps have a lot of high freqs in them. This results in harshness
+as the gain goes up. There are 5 tools that can be used.
 
+1) Guitar tone control. Last resort?
+2) Use a pedal (DIST EQ HI CUT) before the amp block.
+3) use the LOW PASS filter in the amp block.
+4) Use a smoother sounding IR.
+5) Add amp sag in the AMP BLOCK.
 
+RULES OF THUMB<br/>
+Lower gain amps will get more from low pass filters, Thump/Air, and
+pregain EQ. Post amp Mid Bass and Mid EQ can help fatten thin sounds.
+
+Higher gain amps will benefit more from lower bass before the amplifier
+section. Thump can add some heavy feel but the added gain from Thump,
+Air, and Power may clutter up the sound. Use sparingly.
 
 
 
