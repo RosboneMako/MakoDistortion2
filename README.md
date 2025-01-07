@@ -27,7 +27,7 @@ The preset files save IR data in them.
 
 SIGNAL PATH
 ------------------------------------------------------------------
-INPUT BLOCK
+INPUT BLOCK<br/>
 The guitar signal begins being processed at the INPUT block. It then
 moves left to right on the VST diagram. The input block has settings
 for high pass filter, Attack, and Noise Gate.
@@ -60,3 +60,45 @@ resampling of the IR (Size).
 DELAY AND REVERB BLOCKS<br/>
 These effects are fixed at these positions. The effects are always "ON".
 To bypass the effect set its MIX value to 0 (zero).
+
+OUTPUT BLOCK<br/>
+The final block has controls for balance, stereo effect, and output filters. 
+The stereo effect (WIDTH) will delay either the left or right channel to
+create stereo. 
+
+AMPLIFIER BLOCK
+------------------------------------------------------------------
+The amplifier setion has 30 amps programmed. These amps can be adjusted
+using the various controls. 
+
+QUALITY<br/>
+Each amplifier uses a 1024 sample IR for its frequency definition. IRs
+are very CPU intensive. Changing the quality reduces CPU usage by using
+a small section of the IR instead of the whole IR. 
+
+THUMP, AIR, ASYM, POWER, SAG, and THIN<br/>
+Thump and Air boost the low and high freqs using a distorting circuit.
+Asymmetry adds distortion to the lower half of the signal only. 
+Power adds the same distortion across the full range. 
+Sag limits fast transients to simulate an amp running out of power.
+Thin compresses the signal if a lot of gain is being used.
+
+EQ MODE AND LOW PASS<br/>
+There are 10 EQs prgrammed into the VST. Change EQs by changing the MODE
+setting. The low pass is used to filter out harshness from any distortion
+being used. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
