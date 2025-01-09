@@ -219,7 +219,37 @@ section. Thump can add some heavy feel but the added gain from Thump,
 Air, and Power may clutter up the sound. Use sparingly.
 
 
+MONOPHONIC SYNTHESIZER EFFECTS IN MODULATION 
+------------------------------------------------------------------
+This effect barely works. But when it does, it is pretty fun. Have very
+low expectations or just skip them altogether.
 
+MD2 uses a simple approach of measuring the zero crosses of the audio
+data to detect the frequency being played. To do this effectively, the
+signal needs to be void of harmonics. So these effects work best in 
+the neck position of the guitar and may also be helped by turning down
+the guitars tone control. 
+
+The algorithm also works best from the A string to the B string. These 
+tend to have less harmonics and longer waveforms that are easier to detect.
+
+It is also best to have complete silence between notes.
+
+The MOPHO synth generates its own synth sounds. 
+
+The MOMO synth is the same synth that uses external wave files as its
+wave forms. These files are of a single cycle of a sound being played
+at 220 Hz or 440 Hz so they are in normal a tuning.
+
+The SAMMY synth is designed to play longer samples. These samples should
+also based on 220 or 440 Hz sounds. 
+
+The HARPY synth plays longer samples also but tries to let each note
+ring out completely. This is the hardest effect to use and rarely is
+of any value besides fun.
+
+Sample sizes are limited to mono and 1 million samples in size. This
+is done to keep the code simple and somewhat reliable. 
 
 
 
