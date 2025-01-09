@@ -36,6 +36,11 @@ The guitar signal begins being processed at the INPUT block. It then
 moves left to right on the VST diagram. The input block has settings
 for high pass filter, Attack, and Noise Gate.
 
+The high pass filter is very important! This can be your friend when
+an amp is too boomy. This filter has a gentle rolloff that can fix
+boom. Another option is using one of the PreAmp based pedals before
+the amp block. Or use both to get more cutoff.
+
 Attack is used for creating Pad/Violin effects and will gradually turn
 the signal volume up after a silent moment in the playing. 
 
