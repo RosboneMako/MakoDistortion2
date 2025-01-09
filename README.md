@@ -21,7 +21,7 @@ This VST is under constant development and changes daily.
 THINGS TO KNOW
 ------------------------------------------------------------------
 VST LIMITATIONS<br/>
-VST's do not save strings variables. This means things like IR
+VST's do not save string variables. This means things like IR
 files, WAVE files, etc used in the VST will NOT BE AVAILABLE
 from within the DAW at startup or its presets. 
 
