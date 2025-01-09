@@ -98,7 +98,8 @@ using the various controls.
 QUALITY<br/>
 Each amplifier uses a 1024 sample IR for its frequency definition. IRs
 are very CPU intensive. Changing the quality reduces CPU usage by using
-a small section of the IR instead of the whole IR. 
+a small section of the IR instead of the whole IR. The tradeoff is poor
+low frequency definition, which can help heavier gain sounds.
 
 SLOPE<br/>
 MD2 amps use two styles of clipping: Hard and Soft. The slope control mixes
