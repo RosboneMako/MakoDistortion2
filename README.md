@@ -157,7 +157,6 @@ the EFFECT TYPE listbox in the settings area.
 
 MODULATION BLOCK
 ------------------------------------------------------------------
-TYPICAL MOD EFFECTS<br/>
 There are standard style effects available here like Chorus, phaser,
 flanger, etc. There are also some chorus based effects that create
 pitch based sounds. There are four mono-synthesizer styled effects
@@ -190,7 +189,7 @@ The reverb effet can be tweaked using the available controls. Specifically
 room size which expands the delays in time. The low pass filter and built-in
 chorus applied to the wet effect helps smooth the echoes.
 
-Modulation #2 can be applied to the wet effect. 
+Modulation Effect #2 can be applied to the wet effect. 
 
 
 EXTERNAL IMPULSE RESPONSES
