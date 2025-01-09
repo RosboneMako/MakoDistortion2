@@ -29,6 +29,7 @@ MD2 PRESETS<br/>
 The best way to use MD2 is to load and save presets within the VST.
 The preset files save any custom IR data in them.
 
+
 SIGNAL PATH
 ------------------------------------------------------------------
 INPUT BLOCK<br/>
@@ -81,6 +82,14 @@ The final block has controls for balance, stereo effect, and output filters.
 The stereo effect (WIDTH) will delay either the left or right channel to
 create stereo. 
 
+ON SCREEN CONTROL OPERATION
+------------------------------------------------------------------
+There are two basic controls used for setting in MD2: Slider and knob.
+- Both controls have +/- and Default buttons.
+- Most controls support dragging to adjust values. Try not to drag if issues arise.
+- Left click is small change, right click is large, and 3rd button maxes.
+- Right click and 3rd button are based on what side of the control center you are on.
+- Left/Right clicking works on the +/- buttons also.
 
 STEREO/MONO SIGNAL PATH 
 ------------------------------------------------------------------
@@ -141,6 +150,10 @@ The most important are the OverDrives and the DIST EQ pedals. These will
 let you adjust your guitar sound going into the amplifier section. Which
 may be required to get the best possible sound.
 
+To use a pedal, click on the signal flow diagram where you want the pedal
+to be. There are 6 possible locations. Then select the desired pedal from
+the EFFECT TYPE listbox in the settings area.
+
 
 MODULATION BLOCK
 ------------------------------------------------------------------
@@ -150,6 +163,11 @@ flanger, etc. There are also some chorus based effects that create
 pitch based sounds. There are four mono-synthesizer styled effects
 available also. Three of these effects require specific WAVE files
 to operate. 
+
+To use a Mod Effect, click on the signal flow diagram where you want the Mod
+to be. There are 4 possible locations. Then select the desired effect from
+the  EFFECT TYPE listbox in the settings area. 
+
 
 DELAY BLOCK
 ------------------------------------------------------------------
