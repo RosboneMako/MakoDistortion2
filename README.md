@@ -58,7 +58,8 @@ after amp, or in the effect path of a reverb/delay block.
 
 AMPLIFIER BLOCK<br/>
 The amplifier has 31 possible channel settings. There are 30 amplifiers
-and one bypass channel (0). 
+and one bypass channel (0). Select an amp using the CHAN control in the
+amplifier block.
 
 IMPULSE RESPONSE (IR) BLOCK<br/>
 An Impulse Response is a wave file the captures the frequency response
@@ -98,7 +99,7 @@ for input EQ and one for Speaker sim on both left and right channels. This is
 AMPLIFIER BLOCK
 ------------------------------------------------------------------
 The amplifier setion has 30 amps programmed. These amps can be adjusted
-using the various controls. 
+using the various controls. Select which amp to use with the CHAN control.
 
 QUALITY<br/>
 Each amplifier uses a 1024 sample IR for its frequency definition. IRs
