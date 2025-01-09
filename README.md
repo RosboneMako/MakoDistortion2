@@ -154,6 +154,9 @@ To use a pedal, click on the signal flow diagram where you want the pedal
 to be. There are 6 possible locations. Then select the desired pedal from
 the EFFECT TYPE listbox in the settings area.
 
+A pedal can be enabled or disabled in the settings area. You can also right
+click the pedal in the signal flow diagram to toggle it on/off.
+
 
 MODULATION BLOCK
 ------------------------------------------------------------------
@@ -166,6 +169,9 @@ to operate.
 To use a Mod Effect, click on the signal flow diagram where you want the Mod
 to be. There are 4 possible locations. Then select the desired effect from
 the  EFFECT TYPE listbox in the settings area. 
+
+A Mod Effect can be enabled or disabled in the settings area. You can also right
+click the pedal in the signal flow diagram to toggle it on/off.
 
 
 DELAY BLOCK
