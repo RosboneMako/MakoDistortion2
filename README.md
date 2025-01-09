@@ -259,6 +259,20 @@ Sample sizes are limited to mono and 1 million samples in size. This
 is done to keep the code simple and somewhat reliable. 
 
 
+TUNER AND FREQUENCY SWEEP 
+------------------------------------------------------------------
+A very poor tuner is supplied with MD2. But is not good. When enabled
+the current note will be displayed in the bottom status window.
+
+The frequency sweep disengages the input and completes a 20-20000 Hz
+sweep of the signal path. This can be helpful to see what exactly 
+certain filters are doing. 
+
+During freq sweeps, gain should be as low as possible and effects should
+be turned off. 
+
+WARNING: The sweep is very loud! Do not damage your equipment with loud 20 Hz sounds.
+
 
 
 
