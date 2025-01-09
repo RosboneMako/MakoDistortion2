@@ -137,12 +137,35 @@ may be required to get the best possible sound.
 
 MODULATION BLOCK
 ------------------------------------------------------------------
-TYPICAL MOD EFFECTS
+TYPICAL MOD EFFECTS<br/>
 There are standard style effects available here like Chorus, phaser,
 flanger, etc. There are also some chorus based effects that create
 pitch based sounds. There are four mono-synthesizer styled effects
 available also. Three of these effects require specific WAVE files
 to operate. 
+
+DELAY BLOCK
+------------------------------------------------------------------
+The delay is a generic simple delay with mix, time, repeats, etc.
+The offset control changes the left delay time from the right time
+to create a stereo delay effect. Ducking will hold down the delay
+volume while playing and increase it when not playing.
+
+Modulation effect #1 can be placed in the delays wet mix allowing for
+some interesting things like a fifth note chorus on the delay only.
+
+REVERB BLOCK
+------------------------------------------------------------------
+MD2 has a very simplistic reverb based on 16 different delays being
+mixed together. Reverbs 0-10 use a simpler algorithm and sound very
+delay-like. Reverbs 11-19 are denser and come closer to a normal reverb
+effect.
+
+The reverb effet can be tweaked using the available controls. Specifically
+room size which expands the delays in time. The low pass filter and built-in
+chorus applied to the wet effect helps smooth the echoes.
+
+Modulation #2 can be applied to the wet effect. 
 
 
 EXTERNAL IMPULSE RESPONSES
