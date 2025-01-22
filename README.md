@@ -10,7 +10,8 @@
 VERSION
 ------------------------------------------------------------------
 VERSION 2.22
-* Initial release.  
+* Initial release.<br/>  
+
 VERSION2.24
 * Added external amp IR file loading.<br/>
 * Included amp files in the saved PRESET file.<br/>
