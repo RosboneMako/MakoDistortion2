@@ -244,34 +244,38 @@ at a later date. They will NOT be availabe from any DAW related presets.
 DIALING IN AN AMPLIFIER 
 ------------------------------------------------------------------
 The most important thing to set up is the frequencies presented to
-the amplifier section. 
+the amplifier section. The BOOM and CRISP controls are designed to 
+dial in the response of the AMP IR.
 
 BOOMINESS<br/>
 Some amps have a lot of low end present. It may be good to reduce your
-guitars low end before the amp. This can be done with the INPUT sections
-HIGH PASS filter. Values in the 80-150 Hz can be very good.
+guitars low end before the amp. This can be done with the BOOM setting in the amp block.
+another option is the INPUT sections HIGH PASS filter. Values in the 80-150 Hz can be very good.
+some pedals have Low EQ options as well. Experiment with each as they have different slopes
+and will provide varying results.
 
-Another option is to use an OD pedal or the Dist EQ pedals. These will
-provide even greater control and can be used to simulate other amps by
-boosting certain freqs such as mids.
+Using an OD pedal or the Dist EQ pedals will provide furtherr control and can be used to
+simulate other amps by boosting gain or freqs such as mids.
 
 CRISPY HARSHNESS<br/>
 Some amps have a lot of high freqs in them. This results in harshness
-as the gain goes up. There are 5 tools that can be used.
+as the gain goes up. There are 6 tools that can be used.
 
 1) Guitar tone control. Last resort?
-2) Use a pedal (DIST EQ HI CUT) before the amp block.
-3) use the LOW PASS filter in the amp block.
-4) Use a smoother sounding IR.
-5) Add amp sag in the AMP BLOCK.
+2) CRISP control in the AMP section. Good start is .1 then move up.
+3) Use a pedal (DIST EQ HI CUT) before the amp block.
+4) use the LOW PASS filter in the amp block.
+5) Use a smoother sounding IR.
+6) Add amp sag in the AMP BLOCK.
 
 RULES OF THUMB<br/>
 Lower gain amps will get more from low pass filters, Thump/Air, and
 pregain EQ. Post amp Mid Bass and Mid EQ can help fatten thin sounds.
 
-Higher gain amps will benefit more from lower bass before the amplifier
+Higher gain amps will benefit more from less bass before the amplifier
 section. Thump can add some heavy feel but the added gain from Thump,
-Air, and Power may clutter up the sound. Use sparingly.
+Air, and Power may clutter up the sound. Use sparingly. Best results may
+come from adjusting normal EQ settings.
 
 
 MONOPHONIC SYNTHESIZER EFFECTS IN MODULATION 
