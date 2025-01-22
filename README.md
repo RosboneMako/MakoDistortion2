@@ -10,11 +10,12 @@
 VERSION
 ------------------------------------------------------------------
 2.22 - Initial release.  
-2.24 - Added external amp IR file loading.
-     - Included more amp files.
-     - Fixed Path 2 bug where paths merged too early.
-     - Added Boom, Crisp, and Mix to help EQ amps before gain.
-     - Added external file load to restore last used Amp and IR.
+2.24 - Added external amp IR file loading.<br/>
+     - Included more amp files.<br/>
+     - Fixed Path 2 bug where paths merged too early.<br/>
+     - Added Boom, Crisp, and Mix to help EQ amps before gain.<br/>
+     - Added external file load to restore last used Amp and IR.<br/>
+       <br/>
        
 SUMMARY
 ------------------------------------------------------------------
