@@ -2,14 +2,19 @@
 * JUCE VST guitar processor.
 * Tested on Windows only.
 * Written in Visual C++ 2022.
-* Version: 2.22
-* Posted: January 7, 2024
+* Version: 2.24
+* Posted: January 22, 2025
 
 ![Demo Image](docs/assets/md2_demo_222_01.png)
 
 VERSION
 ------------------------------------------------------------------
 2.22 - Initial release.  
+2.24 - Added external amp IR file loading.
+     - Included more amp files.
+     - Fixed Path 2 bug where paths merged too early.
+     - Added Boom, Crisp, and Mix to help EQ amps before gain.
+     - Added external file load to restore last used Amp and IR.
        
 SUMMARY
 ------------------------------------------------------------------
@@ -116,6 +121,13 @@ are very CPU intensive. Changing the quality reduces CPU usage by using
 a small section of the IR instead of the whole IR. The tradeoff is poor
 low frequency definition, which can help heavier gain sounds.
 
+BOOM and CRISP<br/>
+Boom and Crisp are Hi/Lo cut filters to let you adjust the EQ going into the Amp.
+Boom is an adjustable 500 Hz Low Cut filter. The Boom adjusts the steepness of
+the filter. 
+Crisp is a typical 1st order High Cut filter. Crisp can be helpful with cleaner
+amps that are distorting too much.
+
 SLOPE<br/>
 MD2 amps use two styles of clipping: Hard and Soft. The slope control mixes
 between the two types. Soft is best used for low gain and hard for high gain.
@@ -126,6 +138,12 @@ Asymmetry adds distortion to the lower half of the signal only. <br/>
 Power adds the same distortion across the full range. <br/>
 Sag limits fast transients to simulate an amp running out of power.<br/>
 Thin compresses the signal if a lot of gain is being used.<br/>
+
+AMP MIX<br/>
+This control adjusts the mix betweem the driven signal and a clean signal. 
+The clean signal goes thru the Amp IR process and has its EQ applied but no gain
+is applied. This can be helpful on clean amps for finer control of gain by
+mixing low gain with no gain.
 
 EQ MODE AND LOW PASS<br/>
 There are 10 EQs prgrammed into the VST. Change EQs by changing the MODE
@@ -295,6 +313,80 @@ During freq sweeps, gain should be as low as possible and effects should
 be turned off. 
 
 WARNING: The sweep is very loud! Do not damage your equipment with loud 20 Hz sounds.
+
+
+ROOM EQ WIZARD - Sweeping your own amps 
+------------------------------------------------------------------
+Room EQ Wizard is an amazing software package that lets you make frequency sweeps. It
+can be used to make amplifier IRs for use in Mako Distortion 2.
+
+QUICK GUIDE
+1) Download REW, install, etc.
+2) Connect your measurement devices need to drive the amp and record the amps output.
+3) Set the amplifier gain so the amp is on the edge of distorting. 
+4) In REW select PREFERENCES and select the input and output ports of the sound card being used.
+5) Select Measure, the measurement dialog will open. Ignore calibration warnings for now.
+6) Set the output LEVEL to 0 dBFS and set the NAME to 0dB.
+7) Select START to sweep the amplifier. Verify nothing is clipping. Adjust if needed.
+8) A sweep should be made and you should be returned to the main menu with your trace displayed.
+9) Select Measure, the measurement dialog will open. Ignore calibration warnings for now.
+10) Set the output LEVEL to -40 dBFS and set the NAME to 40dB.
+11) Select START to sweep the amplifier.
+12) A sweep should be made and you should be returned to the main menu with your trace displayed.
+13) You should have two sweeps visible at the main menu.
+14) Select the ALL SPL button to view both traces at once with no phase. This is a REQUIRED step.
+15) Select the ACTIONS button. A dialog should appear with many buttons.
+16) Select TRACE ARITHMETIC. A 2nd dialog will appear.
+17) If your traces are noisey, you may choose to SMOOTH them at this point. 
+18) Set the A trace to be 40dB, B Trace to be 0dB, A/B arithmetic, and select Generate button. 
+19) Close the two dialogs and return to the SPL & PHASE view by selecting that button.
+20) We should now only see the GENERATED trace we just created. Select ACTIONS again.
+21) A smaller dialog with GENERATE MINIMUM PHASE should appear. Select that button.
+22) A 2nd dialog appears, select GENERATE AND CLOSE. The phase information for the new trace should be created.
+23) Close the ACTIONS dialog.
+24) In the main menu under select FILE -> EXPORT -> EXPORT IMPULSE RESPONSE AS WAVE FILE.
+25) Select NORMALISE and select your sample rate to 48 kHz. Continue thru to save the file. 
+26) You are done with REW, however, the resulting IR wave file is not valid for use in any programs yet.
+27) Start your AUDIO EDITING PROGRAM (Goldwave).
+
+AUDIO EDITING SOFTWARE - Editing the REW Wave File 
+------------------------------------------------------------------
+The resulting wave file from REW is very large and is not valid for programs. It needs to be cropped and edited 
+in an audio editing program such as Goldwave.
+
+1) The resulting wave file will be about 512 kB with the actual IR located about 8000 samples into the wave file. 
+2) Crop the wave file at the very start of the IR pulse and to at least 1024 samples after that.
+3) At this point you will need to adjust for noise and errors in the sweeps if any.
+4) You may wish to apply a low pass filter to remove noise above 5 kHz.
+5) You may wish to apply a high pass filter to tune the bass response. 
+
+In many situations you may have severe noise above 5 kHz. This should be filtered out. It breaks the volume of the IR and adds
+terrible noise and harshness. Your guitar will also probably never create freqs above 2.5 kHz. Since you have the IR file,
+you can adjust until it sounds good to your ears. 
+
+
+GOLDWAVE SPECIFIC HELP
+Goldwave is a dedicated audio editor. It has a MAIN window and a CONTROL window. CONTROL lets you monitor the output of the wave file and lets 
+you select sources to record from etc. The important setting here is the VU meters.
+
+To understand what our AMP IR is doing we need to see a FREQUENCY graph of it. This can be done two ways: Play the wave file or right click in the wave file.
+
+Right click the VU meter to select the type of meter shown. For our work we want SPECTRUM. This lets us see an FFT frequency spectrum
+of the waveform being played. If set to SPECTRUM, we can right click in the Main window and see an FFT of the selected area of our wave file.
+
+GW has 3 PLAY options. You can set the middle PLAY option to loop playback for 100 times. This lets you play the IR and get a feel for what it will sound like.
+In CONTROL select the blue checkmark (Control Properties). Set PLAY 2 to SECLECTION, Loop 100.
+
+GW has two useful filtering options that work well with IR editing: 
+LOW/HIGH PASS
+PARAMETRIC EQ
+
+These two filters will let you form the IR to a useful state without destroying the phase relationship of the waveform.
+
+The EQUALIZER destroys phase info. This can be helpful if you need more gain from the IR. IRs are normally a large pulse. By destroying the phase you 
+get a more sinusoidal waveform that has an overall volume much higher than a pulse. You can get 3-6 dB more volume if needed.
+
+GQ also has a MAXIMIZE button that lets you normalize your IR to MAX volume. This will be REQUIRED after applying filters. 
 
 
 
