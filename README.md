@@ -11,6 +11,7 @@ VERSION
 ------------------------------------------------------------------
 2.22 - Initial release.  
 2.24 - Added external amp IR file loading.<br/>
+     - Included amp files in the saved PRESET file.<br/>
      - Included more amp files.<br/>
      - Fixed Path 2 bug where paths merged too early.<br/>
      - Added Boom, Crisp, and Mix to help EQ amps before gain.<br/>
@@ -33,7 +34,12 @@ from within the DAW at startup or its presets.
 
 MD2 PRESETS<br/>
 The best way to use MD2 is to load and save presets within the VST.
-The preset files save any custom IR data in them.
+The preset files save any custom AMP and IR data in them.
+
+MD2 tries to load the last used AMP and IRs used. This is helpful
+when using the standalone EXE. Do not rely on this working in the VST.
+When the VST is loaded using external files, they will be wrong at all times.
+You should always load a preset when using the VST. 
 
 
 SIGNAL PATH
