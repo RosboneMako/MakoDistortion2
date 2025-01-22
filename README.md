@@ -320,6 +320,13 @@ ROOM EQ WIZARD - Sweeping your own amps
 Room EQ Wizard is an amazing software package that lets you make frequency sweeps. It
 can be used to make amplifier IRs for use in Mako Distortion 2.
 
+The concept of making an Amp IR is:
+1) Set the amp to edge of distortion.
+2) Sweep the amp at a high input volume.
+3) Sweep the amp at a very low input volume.
+4) The difference of those two sweeps is the input EQ response of the amp.
+5) Convert the difference sweep to an IR.
+
 QUICK GUIDE
 1) Download REW, install, etc.
 2) Connect your measurement devices need to drive the amp and record the amps output.
@@ -349,6 +356,16 @@ QUICK GUIDE
 26) You are done with REW, however, the resulting IR wave file is not valid for use in any programs yet.
 27) Start your AUDIO EDITING PROGRAM (Goldwave).
 
+This looks like a lot of steps. After doing this a couple of times and getting the hang of it, you can sweep an amplifier in a minute or two.
+
+BEST CASE SCENARIOS AND THE NEXT LEVEL<br/>
+You may get best results when the amp EQ knobs are set pretty flat. Experiment as needed.
+
+If you dial in the amp EQ to sound good to your ears, you can use the 0 dB sweep as your output/speaker IR. This will form a better picture of the amp.
+Since we assume that the input EQ is flattened at high gain, the 0 dB sweep should be the amps output EQ/Speaker/Mics/etc. 
+
+
+
 AUDIO EDITING SOFTWARE - Editing the REW Wave File 
 ------------------------------------------------------------------
 The resulting wave file from REW is very large and is not valid for programs. It needs to be cropped and edited 
@@ -365,7 +382,7 @@ terrible noise and harshness. Your guitar will also probably never create freqs 
 you can adjust until it sounds good to your ears. 
 
 
-GOLDWAVE SPECIFIC HELP
+GOLDWAVE SPECIFIC HELP<br/>
 Goldwave is a dedicated audio editor. It has a MAIN window and a CONTROL window. CONTROL lets you monitor the output of the wave file and lets 
 you select sources to record from etc. The important setting here is the VU meters.
 
