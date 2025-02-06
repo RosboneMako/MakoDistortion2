@@ -2,8 +2,8 @@
 * JUCE VST guitar processor.
 * Tested on Windows only.
 * Written in Visual C++ 2022.
-* Version: 2.24
-* Posted: January 22, 2025
+* Version: 3.30
+* Posted: February 5, 2025
 
 ![Demo Image](docs/assets/md2_demo_222_01.png)
 
@@ -19,7 +19,14 @@ VERSION2.24
 * Fixed Path 2 bug where paths merged too early.<br/>
 * Added Boom, Crisp, and Mix to help EQ amps before gain.<br/>
 * Added external file load to restore last used Amp and IR.<br/>
-       
+
+VERSION 3.00
+* Added 200 Amplifier and IR databases.<br/>
+* Improved VST operation.<br/>
+* Compressor pedal fix.<br/>
+* Tremolo pedal fix.<br/>
+* Minor UI updates.<br/>
+
        
 SUMMARY
 ------------------------------------------------------------------
@@ -31,18 +38,18 @@ This VST is under constant development and changes daily.
 THINGS TO KNOW
 ------------------------------------------------------------------
 VST LIMITATIONS<br/>
-VST's do not save string variables. This means things like IR
-files, WAVE files, etc used in the VST will NOT BE AVAILABLE
+VST's do not save string variables. This means things like 
+WAVE files used in the VST will NOT BE AVAILABLE
 from within the DAW at startup or its presets. 
 
-MD2 PRESETS<br/>
-The best way to use MD2 is to load and save presets within the VST.
-The preset files save any custom AMP and IR data in them.
+In order to utilize external files in the VST a database must be used.
+MD2 uses an external database to store Amplifier and Speaker IR paths
+so they can easily be recalled from within a DAW.
 
-MD2 tries to load the last used AMP and IRs used. This is helpful
-when using the standalone EXE. Do not rely on this working in the VST.
-When the VST is loaded using external files, they will be wrong at all times.
-You should always load a preset when using the VST. 
+MD2 PRESETS<br/>
+MD2 can load/save complete setups by selecting Load/Save preset buttons.
+This is helpful when using the stand alone EXE. As of Version 3.00, these
+functions should not be require within the a DAW.
 
 
 SIGNAL PATH
@@ -73,9 +80,9 @@ These blocks can be located in three different locations: before amp,
 after amp, or in the effect path of a reverb/delay block.
 
 AMPLIFIER BLOCK<br/>
-The amplifier has 31 possible channel settings. There are 30 amplifiers
-and one bypass channel (0). Select an amp using the CHAN control in the
-amplifier block.
+The amplifier has 200 possible channel settings. There are 30 built in amplifiers
+and 170 user programmable amplifiers (database). Select an amp using the AMP drop
+down list in the amplifier block.
 
 IMPULSE RESPONSE (IR) BLOCK<br/>
 An Impulse Response is a wave file the captures the frequency response
@@ -83,10 +90,11 @@ of a system. Here they represent the speaker being used by the amplifier
 block. There are adjustements here for bass/treble balance (voice) and
 resampling of the IR (Size).
 
-There are 20 programmed IRs built in to the VST. External IRs can be loaded
-by selecting IR 20 or using the LOAD IR button. Loaded IRs can be resampled.
-The VOICE option mixes the IR with a full frequency IR. So only brightness
-can be added.
+There are 20 programmed IRs built in to the VST. An additional 180 IRs can be added
+to the IR databse. IRs can be resampled using the SIZE control. The VOICE option 
+will modify the frequency response of the IR.
+
+Voice only adds brightness to an external IR. Its default value should be 0.
 
 DELAY AND REVERB BLOCKS<br/>
 These effects are fixed at these positions. The effects are always "ON".
@@ -133,8 +141,7 @@ low frequency definition, which can help heavier gain sounds.
 
 BOOM and CRISP<br/>
 Boom and Crisp are Hi/Lo cut filters to let you adjust the EQ going into the Amp.
-Boom is an adjustable 500 Hz Low Cut filter. The Boom adjusts the steepness of
-the filter. 
+Boom is an adjustable Low Cut filter. The Boom adjusts the steepness of the filter. 
 Crisp is a typical 1st order High Cut filter. Crisp can be helpful with cleaner
 amps that are distorting too much.
 
@@ -142,9 +149,8 @@ SLOPE<br/>
 MD2 amps use two styles of clipping: Hard and Soft. The slope control mixes
 between the two types. Soft is best used for low gain and hard for high gain.
 
-THUMP, AIR, ASYM, POWER, SAG, and THIN<br/>
+THUMP, AIR, POWER, SAG, and THIN<br/>
 Thump and Air boost the low and high freqs using a distorting circuit.<br/>
-Asymmetry adds distortion to the lower half of the signal only. <br/>
 Power adds the same distortion across the full range. <br/>
 Sag limits fast transients to simulate an amp running out of power.<br/>
 Thin compresses the signal if a lot of gain is being used.<br/>
