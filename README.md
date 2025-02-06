@@ -46,10 +46,26 @@ In order to utilize external files in the VST a database must be used.
 MD2 uses an external database to store Amplifier and Speaker IR paths
 so they can easily be recalled from within a DAW.
 
+DATABASE OPERATION<br/>
+MD2 has 30 built in amplifier models and 20 built in speaker IRs. <br/>
+MD2 can access external amps and IRs if they are defined in the Amp/IR database. <br/><br/>
+
+To edit the database, select the DEFINE AMPS or DEFINE IRS buttons on the main menu.
+When editing, simply left mouse click to add items or right click to delete items.
+Changes are automatically saved as you edit. Amps or IRs should be reselected if they
+were in use while editing.
+
+HINT: It is advised to rename the external files to the database slot they will be assigned.
+Numbering the files will greatly simplify use on multiple computers.<br/> 
+For example a v30 IR could be called 55_v30. When setting up the VST on another PC, it will
+be easy to organize the IRs, 55_v30 needs to be loaded into slot 55.
+
+
 MD2 PRESETS<br/>
 MD2 can load/save complete setups by selecting Load/Save preset buttons.
-This is helpful when using the stand alone EXE. As of Version 3.00, these
-functions should not be require within the a DAW.
+This is helpful when using the stand alone EXE. As of Version 3.00 these
+functions should not be require within a DAW.
+
 
 
 SIGNAL PATH
