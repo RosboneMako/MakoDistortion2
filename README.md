@@ -393,7 +393,10 @@ QUICK GUIDE
 26) You are done with REW, however, the resulting IR wave file is not valid for use in any programs yet.
 27) Start your AUDIO EDITING PROGRAM (Goldwave).
 
+Many of these steps are not required but are presented for clarity.
+
 This looks like a lot of steps. After doing this a couple of times and getting the hang of it, you can sweep an amplifier in a minute or two.
+
 
 BEST CASE SCENARIOS AND THE NEXT LEVEL<br/>
 You may get best results when the amp EQ knobs are set pretty flat. Experiment as needed.
