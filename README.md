@@ -56,7 +56,7 @@ Changes are automatically saved as you edit. Amps or IRs should be reselected if
 were in use while editing.
 
 HINT: It is advised to rename the external files to the database slot they will be assigned.
-Numbering the files will greatly simplify use on multiple computers.<br/><br/>
+Numbering the files will greatly simplify use on multiple computers.<br/>
 
 For example a v30 IR could be called 55_v30. When setting up the VST on another PC, it will
 be easy to organize the IRs, 55_v30 needs to be loaded into slot 55.
