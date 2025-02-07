@@ -411,9 +411,10 @@ in an audio editing program such as Goldwave.
 
 1) The resulting wave file will be about 512 kB with the actual IR located about 8000 samples into the wave file. 
 2) Crop the wave file at the very start of the IR pulse and to at least 1024 samples after that.
-3) At this point you will need to adjust for noise and errors in the sweeps if any.
-4) You may wish to apply a low pass filter to remove noise above 5 kHz.
-5) You may wish to apply a high pass filter to tune the bass response. 
+3) Some IRs will have long sloping waves before the full vol peak. Each point before the peak = lag. Trim pre-peaks as needed. 
+4) At this point you will need to adjust for noise and errors in the sweeps if any.
+5) You may wish to apply a low pass filter to remove noise above 5 kHz.
+6) You may wish to apply a high pass filter to tune the bass response. 
 
 In many situations you may have severe noise above 5 kHz. This should be filtered out. It breaks the volume of the IR and adds
 terrible noise and harshness. Your guitar will also probably never create freqs above 2.5 kHz. Since you have the IR file,
