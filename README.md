@@ -364,7 +364,7 @@ The concept of making an Amp IR is:
 4) The difference of those two sweeps is the input EQ response of the amp.
 5) Convert the difference sweep to an IR.
 
-![Demo Image](docs/assets/REW_Sweeps_01.png)
+![Demo REW Image](docs/assets/REW_Sweeps_01.png)
 
 QUICK GUIDE
 1) Download REW, install, etc.
@@ -386,19 +386,15 @@ QUICK GUIDE
 17) If your traces are noisey, you may choose to SMOOTH them at this point. 
 18) Set the A trace to be 40dB, B Trace to be 0dB, A/B arithmetic, and select Generate button. 
 19) Close the two dialogs and return to the SPL & PHASE view by selecting that button.
-20) We should now only see the GENERATED trace we just created. Select ACTIONS again.
-21) A smaller dialog with GENERATE MINIMUM PHASE should appear. Select that button.
-22) A 2nd dialog appears, select GENERATE AND CLOSE. The phase information for the new trace should be created.
-23) Close the ACTIONS dialog.
-24) In the main menu under select FILE -> EXPORT -> EXPORT IMPULSE RESPONSE AS WAVE FILE.
-25) Select NORMALISE and select your sample rate to 48 kHz. Continue thru to save the file. 
-26) You are done with REW, however, the resulting IR wave file is not valid for use in any programs yet.
-27) Start your AUDIO EDITING PROGRAM (Goldwave).
-
-Many of these steps are not required but are presented for clarity.
+20) In the main menu under select FILE -> EXPORT -> EXPORT IMPULSE RESPONSE AS WAVE FILE.
+21) Select NORMALISE and select your sample rate to 48 kHz. Continue thru to save the file. 
+22) You are done with REW, however, the resulting IR wave file is not valid for use in any programs yet.
+23) Start your AUDIO EDITING PROGRAM (Goldwave).
 
 This looks like a lot of steps. After doing this a couple of times and getting the hang of it, you can sweep an amplifier in a minute or two.
 
+NOTE: If you save individual traces and try to merge them later, REW may not understand the phase information. It may be necessary to GENERATE MINIMUM PHASE
+for the final trace before it can be exported as an IR wave file.
 
 BEST CASE SCENARIOS AND THE NEXT LEVEL<br/>
 You may get best results when the amp EQ knobs are set pretty flat. Experiment as needed.
@@ -423,6 +419,8 @@ In many situations you may have severe noise above 5 kHz. This should be filtere
 terrible noise and harshness. Your guitar will also probably never create freqs above 2.5 kHz. Since you have the IR file,
 you can adjust until it sounds good to your ears. 
 
+
+![Demo GoldWave Image](docs/assets/gw_ir_file_01.png)
 
 GOLDWAVE SPECIFIC HELP<br/>
 Goldwave is a dedicated audio editor. It has a MAIN window and a CONTROL window. CONTROL lets you monitor the output of the wave file and lets 
