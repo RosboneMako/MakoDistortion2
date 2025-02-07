@@ -364,6 +364,8 @@ The concept of making an Amp IR is:
 4) The difference of those two sweeps is the input EQ response of the amp.
 5) Convert the difference sweep to an IR.
 
+![Demo Image](docs/assets/REW_Sweeps_01.png)
+
 QUICK GUIDE
 1) Download REW, install, etc.
 2) Connect your measurement devices need to drive the amp and record the amps output.
