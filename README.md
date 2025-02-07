@@ -419,10 +419,10 @@ In many situations you may have severe noise above 5 kHz. This should be filtere
 terrible noise and harshness. Your guitar will also probably never create freqs above 2.5 kHz. Since you have the IR file,
 you can adjust until it sounds good to your ears. 
 
-EXAMPLE IR PULSE IN GOLDWAVE
+EXAMPLE IR PULSE IN GOLDWAVE<br/>
 ![Demo GoldWave Image](docs/assets/gw_ir_file_01.png)
 
-EXAMPLE FFT VIEW OF IR PULSE IN GOLDWAVE
+EXAMPLE FFT VIEW OF IR PULSE IN GOLDWAVE<br/>
 ![Demo IR FFT Image](docs/assets/gw_ir_file_02.png)
 
 GOLDWAVE SPECIFIC HELP<br/>
