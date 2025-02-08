@@ -55,6 +55,9 @@ When editing, simply left mouse click to add items or right click to delete item
 Changes are automatically saved as you edit. Amps or IRs should be reselected if they
 were in use while editing.
 
+The Amps and Speaker IRs are referenced in the DAW and MD2 by slot number only. Changing an amp in
+the database will change it in any DAW or MD2 preset. 
+
 HINT: It is advised to rename the external files to the database slot they will be assigned.
 Numbering the files will greatly simplify use on multiple computers.<br/>
 
@@ -65,8 +68,8 @@ be easy to organize the IRs, 55_v30 needs to be loaded into slot 55.
 MD2 PRESETS<br/>
 MD2 can load/save complete setups by selecting Load/Save preset buttons.
 This is helpful when using the stand alone EXE. As of Version 3.00 these
-functions should not be require within a DAW.
-
+functions should not be required within a DAW. It may be easier to use
+the MD2 presets when sharing across multiple PCs.
 
 
 SIGNAL PATH
@@ -81,7 +84,7 @@ an amp is too boomy. This filter has a gentle rolloff that can fix
 boom. Another option is using one of the PreAmp based pedals before
 the amp block. Or use both to get more cutoff.
 
-Attack is used for creating Pad/Violin effects and will gradually turn
+ATTACK is used for creating Pad/Violin effects and will gradually turn
 the signal volume up after a silent moment in the playing. 
 
 The Noise Gate turns the volume down while not playing. Adjust until
@@ -98,7 +101,7 @@ after amp, or in the effect path of a reverb/delay block.
 
 AMPLIFIER BLOCK<br/>
 The amplifier has 200 possible channel settings. There are 30 built in amplifiers
-and 170 user programmable amplifiers (database). Select an amp using the AMP drop
+and 169 user programmable amplifiers (database). Select an amp using the AMP drop
 down list in the amplifier block.
 
 IMPULSE RESPONSE (IR) BLOCK<br/>
@@ -107,11 +110,15 @@ of a system. Here they represent the speaker being used by the amplifier
 block. There are adjustements here for bass/treble balance (voice) and
 resampling of the IR (Size).
 
-There are 20 programmed IRs built in to the VST. An additional 180 IRs can be added
+There are 20 programmed IRs built in to the VST. An additional 179 IRs can be added
 to the IR databse. IRs can be resampled using the SIZE control. The VOICE option 
 will modify the frequency response of the IR.
 
 Voice only adds brightness to an external IR. Its default value should be 0.
+
+As with the Amp database, an IR is referenced by its slot number in both MD2 and the DAW.
+Changing an IR in the databse will change it everywhere it is referenced. Again, best
+practice would be to number the IR files with a slot number prefix.
 
 DELAY AND REVERB BLOCKS<br/>
 These effects are fixed at these positions. The effects are always "ON".
@@ -144,11 +151,19 @@ intensive. There can be up to four IRs being calculated at one time. One
 for input EQ and one for Speaker sim on both left and right channels. This is
 1000's of calculations for each sample of the audio data.
 
+The bottom row of the VST diagram is a clean path. This path is always stereo
+and it bypasses the Amp/IR block. This path mixes with the top row signal
+by the INPUT block PATH 2 MIX control. Additional control can be had by using
+pedals in that row. This is good for bass use or widening guitar by having a
+cleaner stereo chorus in the bottom row.
 
 AMPLIFIER BLOCK
 ------------------------------------------------------------------
 The amplifier setion has 30 amps programmed. These amps can be adjusted
 using the various controls. Select which amp to use with the CHAN control.
+An additional 169 amps can be added by editing the AMP database. The database
+holds the file paths for the amp input EQ IRs. Once an amp is added, it can be 
+recalled by selecting it from the AMP drop down list in the amp block.
 
 QUALITY<br/>
 Each amplifier uses a 1024 sample IR for its frequency definition. IRs
@@ -158,9 +173,7 @@ low frequency definition, which can help heavier gain sounds.
 
 BOOM and CRISP<br/>
 Boom and Crisp are Hi/Lo cut filters to let you adjust the EQ going into the Amp.
-Boom is an adjustable Low Cut filter. The Boom adjusts the steepness of the filter. 
-Crisp is a typical 1st order High Cut filter. Crisp can be helpful with cleaner
-amps that are distorting too much.
+Boom and Crisp are typical 1st order Low/High Cut filters.
 
 SLOPE<br/>
 MD2 amps use two styles of clipping: Hard and Soft. The slope control mixes
@@ -171,6 +184,9 @@ Thump and Air boost the low and high freqs using a distorting circuit.<br/>
 Power adds the same distortion across the full range. <br/>
 Sag limits fast transients to simulate an amp running out of power.<br/>
 Thin compresses the signal if a lot of gain is being used.<br/>
+These controls are very helpful for edge of breakup sounds. Adding some
+additional gain with the Power/Thump/Air controls will liven up a cleaner
+amp.
 
 AMP MIX<br/>
 This control adjusts the mix betweem the driven signal and a clean signal. 
