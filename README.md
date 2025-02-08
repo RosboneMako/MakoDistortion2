@@ -157,10 +157,21 @@ by the INPUT block PATH 2 MIX control. Additional control can be had by using
 pedals in that row. This is good for bass use or widening guitar by having a
 cleaner stereo chorus in the bottom row.
 
+AMPLIFIER AND SPEAKER IR DATABASE
+------------------------------------------------------------------
+A total of 200 amps and 200 IRs are defined in the database. 
+
+To edit the amps in the database select the DEFINE AMPS button at the main menu. A simple grid
+will appear that allows you to page thru the 200 amps. By left clicking the Low, Med, High grid
+cells you can set the gain range of the amplifier. Left click the next cell to locate the 
+amp IR file to use for this amplifier. Right clicking an amp path cell will delete that amp from the list.
+
+To edit the Speaker IR database select the DEFINE IRs button at the main menu. Follow the same steps laid for amps out to edit.
+
 AMPLIFIER BLOCK
 ------------------------------------------------------------------
 The amplifier setion has 30 amps programmed. These amps can be adjusted
-using the various controls. Select which amp to use with the CHAN control.
+using the various controls. Select which amp to use with the Amplifier drop down list.
 An additional 169 amps can be added by editing the AMP database. The database
 holds the file paths for the amp input EQ IRs. Once an amp is added, it can be 
 recalled by selecting it from the AMP drop down list in the amp block.
