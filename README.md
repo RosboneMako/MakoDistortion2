@@ -5,7 +5,7 @@
 * Version: 3.00
 * Posted: February 5, 2025
 
-![Demo Image](docs/assets/md2_demo_300_01.png)
+![Demo Image](docs/assets/md2_demo_400_01.png)
 
 VERSION
 ------------------------------------------------------------------
@@ -27,6 +27,11 @@ VERSION 3.00
 * Tremolo pedal fix.<br/>
 * Minor UI updates.<br/>
 
+VERSION 4.00
+* Switched all controls to Juce for DAW automation.
+* Reworked several pedals.
+* Reworked built in amplifier/speaker IRs.
+* Removed backward compatibility Preset code.
        
 SUMMARY
 ------------------------------------------------------------------
@@ -132,11 +137,10 @@ create stereo.
 ON SCREEN CONTROL OPERATION
 ------------------------------------------------------------------
 There are two basic controls used for setting in MD2: Slider and knob.
-- Both controls have +/- and Default buttons.
+- Mouse click sets a value.
 - Most controls support dragging to adjust values. Try not to drag if issues arise.
-- Left click is small change, right click is large, and 3rd button maxes.
-- Right click and 3rd button are based on what side of the control center you are on.
-- Left/Right clicking works on the +/- buttons also.
+- Double Click will set the control to its default (Except Pedals and Mods).
+- Pedals and Mods have an extension that adds V3 functionality.
 
 STEREO/MONO SIGNAL PATH 
 ------------------------------------------------------------------
@@ -199,7 +203,7 @@ These controls are very helpful for edge of breakup sounds. Adding some
 additional gain with the Power/Thump/Air controls will liven up a cleaner
 amp.
 
-AMP MIX<br/>
+CLEAN VOL<br/>
 This control adjusts the mix betweem the driven signal and a clean signal. 
 The clean signal goes thru the Amp IR process and has its EQ applied but no gain
 is applied. This can be helpful on clean amps for finer control of gain by
@@ -223,7 +227,7 @@ is best used for super high gain amps while soloing.
 
 PEDAL BLOCK
 ------------------------------------------------------------------
-There are 20 pedals programmed into the VST. Most have limited use cases.
+There are 29 pedals programmed into the VST. Most have limited use cases.
 The most important are the OverDrives and the DIST EQ pedals. These will 
 let you adjust your guitar sound going into the amplifier section. Which
 may be required to get the best possible sound.
@@ -367,7 +371,7 @@ is done to keep the code simple and somewhat reliable.
 TUNER AND FREQUENCY SWEEP 
 ------------------------------------------------------------------
 A very poor tuner is supplied with MD2. But is not good. When enabled
-the current note will be displayed in the bottom status window.
+the current note will be displayed in the signal path window.
 
 The frequency sweep disengages the input and completes a 20-20000 Hz
 sweep of the signal path. This can be helpful to see what exactly 
