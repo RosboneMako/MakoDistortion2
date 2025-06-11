@@ -5,7 +5,7 @@
 * Version: 3.00
 * Posted: February 5, 2025
 
-![Demo Image](docs/assets/md2_demo_400_01.png)
+![Demo Image](docs/assets/md2_Demo_400_01.png)
 
 VERSION
 ------------------------------------------------------------------
